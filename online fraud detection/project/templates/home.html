@@ -1,0 +1,108 @@
+<style>
+body {
+  background-image: url('../static/images/background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+h1{
+  color: chartreuse;
+}
+label{
+  color: aliceblue;
+}
+p{
+  color: aliceblue;
+}
+</style>
+
+<html>
+<form action="/pred" method="POST">
+
+<br>
+<br>
+
+<p>step :</p>
+<br>
+<br>
+<input type="text" name="step"></input>
+<br>
+<br>
+<p>amount:</p>
+<br>
+<br>
+<input type="text" name="amount"></input>
+<br>
+<br>
+<p>oldbalanceOrg :</p>
+<br>
+<br>
+<input type="text" name="oldbalanceOrg"></input>
+
+<br>
+<br>
+<p>newbalanceOrig :</p>
+<br>
+<br>
+<input type="text" name="newbalanceOrig"></input>
+
+<br>
+<br>
+<p>oldbalanceDest :</p>
+<br>
+<br>
+<input type="text" name="oldbalanceDest"></input>
+
+<br>
+<br>
+<p>newbalanceDest :</p>
+<br>
+<br>
+<input type="text" name="newbalanceDest"></input>
+
+<br>
+<br>
+<label >type_CASH_OUT:</label>
+<br>
+<select name="type_CASH_OUT">
+  <option value="1">True</option>
+  <option value="0">False</option>
+  
+
+</select>
+<br>
+<br>
+<label >type_DEBIT:</label>
+<br>
+<select name="type_DEBIT">
+  <option value="1">True</option>
+  <option value="0">False</option>
+  
+
+</select>
+<br>
+<br>
+<label >type_PAYMENT:</label>
+<br>
+<select name="type_PAYMENT">
+  <option value="1">True</option>
+  <option value="0">False</option>
+  
+
+</select>
+<br>
+<br>
+<label >type_TRANSFER:</label>
+<br>
+<select name="type_TRANSFER">
+  <option value="1">True</option>
+  <option value="0">False</option>
+</select>
+<br>
+<br>
+<input type="submit"></input>
+
+</form>
+
+<h1>{{result}}</h1>
+</html>
